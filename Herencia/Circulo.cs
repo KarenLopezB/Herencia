@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace Herencia
 {
-    class Triangulo : Figura
+    class Circulo : Figura
     {
-        public double Base { get; set; }
-        public double Altura { get; set; }
+        public double Radio { get; set; }
         public override double calcularArea()
         {
-            return (Base * Altura) / 2.0;
+            return Math.PI * (Radio * Radio);
         }
-
-        public Triangulo()
+        public Circulo(double radio)
         {
-            Color = "Amarillo";
+            Radio = radio;
+            Color = "Sin color";
         }
     }
 }
